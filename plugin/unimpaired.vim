@@ -14,7 +14,7 @@ set cpo&vim
 
 function! s:MapNextFamily(map,cmd)
   let map = '<Plug>unimpaired'.toupper(a:map)
-  let end = ' ".(v:count ? v:count : "")<CR>'
+  let end = ' ".(v:count ? v:count : "")<CR>zz'
   execute 'nmap <silent> '.map.'Previous :<C-U>exe "'.a:cmd.'previous'.end
   execute 'nmap <silent> '.map.'Next     :<C-U>exe "'.a:cmd.'next'.end
   execute 'nmap <silent> '.map.'First    :<C-U>exe "'.a:cmd.'first'.end
